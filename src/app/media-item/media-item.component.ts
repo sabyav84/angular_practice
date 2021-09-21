@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'mw-media-item',
   templateUrl: './media-item.component.html',
   styleUrls: ['./media-item.component.css']
 })
-export class MediaItemComponent {
-  name= 'The Redemption'
-  wasWatched(){
-    return true;
+export class MediaItemComponent {  
+  @Input() mediaItem:any;
+
+  onDelete(){
+    console.log('Deleted!!');
   }
 
 }
